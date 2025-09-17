@@ -1,11 +1,8 @@
-import { app, BrowserWindow, Menu, Tray, globalShortcut, ipcMain, shell, BrowserView } from 'electron';
-import path from 'path';
-import { fileURLToPath } from 'url';
-import { dirname } from 'path';
-import Database from 'better-sqlite3';
+const { app, BrowserWindow, Menu, Tray, globalShortcut, ipcMain, shell, BrowserView } = require('electron');
+const path = require('path');
+const Database = require('better-sqlite3');
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const __dirname = __filename ? path.dirname(__filename) : __dirname;
 
 class DataExtractorApp {
   private mainWindow: BrowserWindow | null = null;
