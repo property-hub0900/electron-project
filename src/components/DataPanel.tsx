@@ -285,3 +285,5 @@ export const DataPanel: React.FC = () => {
     </div>
   );
 };
+
+export default DataPanel;
